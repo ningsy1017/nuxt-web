@@ -19,9 +19,14 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
-  }
+	components: {
+		Logo
+	},
+	async  asyncData($axios){
+	  return await  $axios.get(`{https://api.myjson.com/bins/vjjdc`).then((res)=>{
+		  console.log(res)
+	  })
+	}
 }
 </script>
 

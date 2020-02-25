@@ -30,7 +30,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/antd-ui'
+	'@/plugins/antd-ui',
+	'@/plugins/axios'
   ],
   router:{
 	mode: 'history'
@@ -44,7 +45,11 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+	'@nuxtjs/axios',
   ],
+  axios: {
+    // proxyHeaders: false
+  },
   /*
   ** Build configuration
   */
